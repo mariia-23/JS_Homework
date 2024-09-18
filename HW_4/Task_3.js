@@ -1,7 +1,7 @@
 const minAge = 18;
 const maxAge = 60;
-let age = parseInt("11");
-if(typeof age !== "number") {
+let age = ("jfkg");
+if(isNaN(age)) {
     console.log("Incorrect data type");  
 } else if(age < minAge) {
     console.log("You don't have access cause your age is " + age + "\nIt's less than " + minAge);    
