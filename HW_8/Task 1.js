@@ -47,7 +47,7 @@ const isBiggerThan90 = taskArray.some((element) => element > 90);
 console.log(isBiggerThan90);
 
 // task 8
-const isBiggerThan10 = taskArray.every((element) => element > 10);
+const isBiggerThan10 = taskArray.every((element) => element >= 10  && element < 100);
 console.log(isBiggerThan10);
 
 
