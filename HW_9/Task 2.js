@@ -31,9 +31,12 @@ console.log(characters);
 // 2. Напишите функцию getCharacter(name), позволяющую получить объект персонажа по его имени// getCharacter('Fred') => { 'name': 'Fred', 'age': 40 }
 
 function getCharacter(charName = '') {
-    if (characters.map(element => Object.values(element)).flat().includes(charName)) {
-        return characters.find(character => character.name === charName);
-    } else console.log('Not found');
+    const character = characters.find(character => character.name === charName);
+    if (!character) {
+       console.log('Not found');
+     } else {
+         return character;
+      }
 }
 console.log(getCharacter('Jack'));
 
@@ -49,6 +52,9 @@ function updateCharacter(name, newCharacter) {
     if (changedChar) {
         changedChar.name = newCharacter.name;
         changedChar.age = newCharacter.age;
+    } else {
+        console.log("No such character");
+        
     }
 }
 updateCharacter('Phill', { name: 'Phill1', age: 23 });

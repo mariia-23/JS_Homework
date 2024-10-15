@@ -25,8 +25,8 @@ console.log(string);
 // 3. Создать массив из ключей и значений объекта character, перебрать массив циклом for. 
 //    На каждой итерации вывести пары ключ-значнение в виде `key = ${key}, value = ${value}`
 const keysAndValues = Object.entries(character);
-for (const i of keysAndValues) {
-    console.log(`key = ${i[0]}, value = ${i[1]}`);
+for (const [key, value] of keysAndValues) {
+    console.log(`key = ${key}, value = ${value}`);
 }
 
 // 4. Проверить, есть ли в объекте ключ salary, результат вывести в консоль 
